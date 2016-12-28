@@ -44,9 +44,8 @@ public class BasicIT {
 
     @Test
     public void FF48() {
-        // org.openqa.selenium.TimeoutException: Expected condition failed:
-        // waiting for BasicIT$1@... (tried for 5 second(s) with 500
-        // MILLISECONDS interval)
+        // org.junit.ComparisonFailure: expected:<timer[ double-clicked]> but
+        // was:<timer[]>
         test("48");
     }
 
