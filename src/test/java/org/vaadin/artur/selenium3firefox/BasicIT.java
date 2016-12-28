@@ -44,8 +44,9 @@ public class BasicIT {
 
     @Test
     public void FF48() {
-        // org.junit.ComparisonFailure: expected:<timer[ double-clicked]> but
-        // was:<timer[]>
+        // org.openqa.selenium.UnsupportedCommandException: POST
+        // /session/aa06e070-d52a-e54d-83bc-8670243e73b6/moveto did not match a
+        // known command
         test("48");
     }
 
@@ -67,8 +68,9 @@ public class BasicIT {
 
     @Test
     public void FF51() {
-        // org.junit.ComparisonFailure: expected:<timer[ double-clicked]> but
-        // was:<timer[]>
+        // org.openqa.selenium.UnsupportedCommandException: POST
+        // /session/843994fd-341a-cc4a-b517-42150b9b71cb/moveto did not match a
+        // known command
         test("51b8");
     }
 
@@ -90,7 +92,8 @@ public class BasicIT {
                 }
             });
             WebElement div = driver.findElement(By.xpath("//div"));
-            new Actions(driver).doubleClick(div);
+            new Actions(driver).doubleClick(div).perform();
+            ;
             Assert.assertEquals("timer double-clicked", div.getText());
         } finally {
             if (driver != null) {
