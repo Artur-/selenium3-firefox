@@ -80,7 +80,7 @@ public class BasicIT {
             driver = new FirefoxDriver(
                     new FirefoxBinary(new File(getBrowserExecutable(version))),
                     null);
-            driver.get("http://localhost:3000/testpage.html");
+            driver.get("http://localhost:8080/testpage.html");
             Assert.assertEquals("window.something failure", "something else",
                     driver.executeScript("return window.something;"));
             new WebDriverWait(driver, 5).until(new Predicate<WebDriver>() {
